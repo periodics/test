@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Homepage</title>
+
+  <!-- Font & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+  <main class="slide">
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">🛍️</span>
+        <span class="brand-name">PESAN MAKAN</span>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#offers" class="nav-link">Offers</a></li>
+          <li><a href="#productlist" class="nav-link">Product List</a></li>
+          <li><a href="#product" class="nav-link">Product</a></li>
+          <li><a href="#detail" class="nav-link">Detail Product</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#profile" class="nav-link">Profile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="slide-content">
+      <h1 class="title">Welcome to Pesan Makan!</h1>
+      <p class="subtitle">Find your favorite items with best deals and orange vibes!</p>
+
+      <div class="card-row">
+        <article class="card" id="menu">
+          <h2>Menu</h2>
+          <p>Explore our top categories and popular collections.</p>
+          <a class="card-btn" href="#menu">Go to Menu</a>
+        </article>
+
+        <article class="card" id="offers">
+          <h2>Offers</h2>
+          <p>Enjoy limited-time discounts and special promotions.</p>
+          <a class="card-btn" href="#offers">See Offers</a>
+        </article>
+
+        <article class="card" id="profile">
+          <h2>Profile</h2>
+          <p>Manage your account, orders, and saved items.</p>
+          <a class="card-btn" href="#profile">Open Profile</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCT LIST -->
+    <section id="productlist" class="slide-content">
+      <h1 class="title">🧾 Product List</h1>
+      <p class="subtitle">Browse all available products in our collection.</p>
+
+      <div class="card-row">
+        <article class="card">
+          <h2>Orange Juice</h2>
+          <p>Freshly squeezed orange juice 100% natural.</p>
+          <a class="card-btn" href="#detail">View Details</a>
+        </article>
+
+        <article class="card">
+          <h2>Orange Bag</h2>
+          <p>Trendy and eco-friendly tote bag for everyday use.</p>
+          <a class="card-btn" href="#detail">View Details</a>
+        </article>
+
+        <article class="card">
+          <h2>Orange T-shirt</h2>
+          <p>Bright and comfy cotton T-shirt with orange print.</p>
+          <a class="card-btn" href="#detail">View Details</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCT -->
+    <section id="product" class="slide-content">
+      <h1 class="title">🧡 Product</h1>
+      <p class="subtitle">Choose from our featured products below.</p>
+
+      <div class="card-row">
+        <article class="card">
+          <h2>Orange Hoodie</h2>
+          <p>Soft fleece material with minimalist orange logo.</p>
+          <a class="card-btn" href="#detail">See Detail</a>
+        </article>
+
+        <article class="card">
+          <h2>Orange Mug</h2>
+          <p>Ceramic mug perfect for your morning coffee.</p>
+          <a class="card-btn" href="#detail">See Detail</a>
+        </article>
+
+        <article class="card">
+          <h2>Orange Sneakers</h2>
+          <p>Stylish sneakers that match your vibrant lifestyle.</p>
+          <a class="card-btn" href="#detail">See Detail</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- DETAIL PRODUCT -->
+    <section id="detail" class="slide-content">
+      <h1 class="title">🔎 Detail Product</h1>
+      <p class="subtitle">Here’s the full description of your selected item.</p>
+
+      <div class="card">
+        <h2>Product Name: Orange Hoodie</h2>
+        <p><strong>Price:</strong> $39.99</p>
+        <p><strong>Description:</strong> Made from premium fleece, this hoodie keeps you warm and stylish with its clean orange tone and soft fabric.</p>
+        <p><strong>Stock:</strong> 12 items available</p>
+        <a class="card-btn" href="#productlist">Back to Product List</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="slide-content">
+      <h1 class="title">👋 About Us</h1>
+      <p class="subtitle">We love oranges and great design.</p>
+
+      <p>
+        OrangeStore is a small creative e-commerce project focusing on vibrant, cheerful, and minimalist design.
+        We believe shopping should be simple, fast, and full of energy — just like the color orange.
+      </p>
+      <p>
+        Our team works daily to bring fresh deals and quality products to make your day brighter.
+      </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="slide-footer">
+      <small>OrangeStore • © <span id="year"></span> • All rights reserved.</small>
+    </footer>
+  </main>
+
+  <script>
+    // Script kecil untuk update tahun & highlight nav aktif
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        links.forEach(x => x.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
