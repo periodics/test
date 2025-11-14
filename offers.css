@@ -85,13 +85,13 @@ body {
   border: 1px solid #ffd8cd;
 }
 
-.brand__name {
+.judul {
   color: var(--brand);
   font-weight: 800;
   letter-spacing: .2px;
 }
 
-.nav {
+.hubungwebsite {
   display: flex;
   gap: 18px;
   margin-left: auto;
