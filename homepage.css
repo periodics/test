@@ -23,6 +23,9 @@ body {
   margin: 0;
   background: var(--bg-light);
   color: var(--text-dark);
+
+  /* agar konten tidak tertutup navbar */
+  padding-top: 90px;
 }
 
 /* =========================
@@ -38,6 +41,13 @@ body {
   box-shadow: var(--shadow);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+
+  /* === membuat navbar tetap stay === */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .brand {
@@ -215,4 +225,3 @@ body {
     font-size: 1.5rem;
   }
 }
-  
