@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesen Makan — Profil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="homepage.html" class="brand">
+        <div class="brand__logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 30c0 13.255 10.745 24 24 24s24-10.745 24-24H8Z" fill="#ff6a3d"/>
+            <path d="M54 30c0 11.046-8.954 20-20 20S14 41.046 14 30" stroke="#ff6a3d" stroke-width="4" stroke-linecap="round"/>
+            <path d="M20 18c0 2 2 4 8 4s16-2 16-4" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="brand__name">Pesen Makan</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav__link" href="web1.html">Home</a>
+        <a class="nav__link" href="web3.html">Offers</a>
+        <a class="nav__link" href="web2.html">Products</a>
+        <a class="nav__link nav__link--active" href="web4.html">Profile</a>
+      </nav>
+
+      <div class="user">
+        <button class="icon-btn" aria-label="Search">🔍</button>
+        <div class="avatar"><img src="https://i.pravatar.cc/40?img=10" alt="User avatar"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="profile card">
+      <div class="profile-header">
+        <div class="avatar-large">
+          <img src="https://i.pravatar.cc/120?img=10" alt="Foto Profil" />
+        </div>
+        <div>
+          <h1 class="profile-name">Dias Sadewa</h1>
+          <p class="muted">Pengguna sejak Januari 2023</p>
+          <div class="profile-badges">
+            <span class="badge badge--success">Member Gold</span>
+            <span class="badge badge--info">50 Pesanan</span>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="profile-info">
+        <div class="info-section">
+          <h2>Informasi Pribadi</h2>
+          <p><strong>Email:</strong> dias.sadewa@example.com</p>
+          <p><strong>Nomor Telepon:</strong> +62 812 3456 7890</p>
+          <p><strong>Alamat:</strong> Jl. Melati No. 10, Bandung</p>
+        </div>
+
+        <div class="info-section">
+          <h2>Riwayat Pesanan</h2>
+          <ul class="order-list">
+            <li class="order-item">
+              <div>
+                <strong>Burger Lezat</strong><br/>
+                <span class="muted">15 Oktober 2025 • Rp 48.000</span>
+              </div>
+              <span class="badge badge--warning">Selesai</span>
+            </li>
+            <li class="order-item">
+              <div>
+                <strong>Pizza Margherita</strong><br/>
+                <span class="muted">10 Oktober 2025 • Rp 65.000</span>
+              </div>
+              <span class="badge badge--warning">Selesai</span>
+            </li>
+            <li class="order-item">
+              <div>
+                <strong>Kopi Susu</strong><br/>
+                <span class="muted">8 Oktober 2025 • Rp 20.000</span>
+              </div>
+              <span class="badge badge--info">Dalam Pengantaran</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h2>Preferensi</h2>
+          <p>Kategori favorit: 🍣 Sushi, 🍕 Pizza, ☕ Minuman Dingin</p>
+          <p>Notifikasi: <strong>Aktif</strong></p>
+        </div>
+      </div>
+
+      <div class="profile-actions">
+        <a href="#" class="btn btn--primary">Edit Profil</a>
+        <a href="#" class="btn btn--ghost">Keluar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2025 Pesen Makan • Semua hak dilindungi.</p>
+      <nav class="footer__nav">
+        <a href="#">Kebijakan Privasi</a>
+        <span>•</span>
+        <a href="#">Syarat & Ketentuan</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
