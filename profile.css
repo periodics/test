@@ -65,7 +65,6 @@ body {
 
 .brand__logo {
   display: grid;
-  place-items: center;
   width: 32px;
   height: 32px;
 }
@@ -247,7 +246,7 @@ body {
 
 .btn--primary {
   background: var(--brand);
-  color: #fff;
+  color: #ffffff;
   border-color: var(--brand-600);
 }
 
