@@ -74,6 +74,8 @@ body {
 .brand__name {
   color: #ff6a3d;
   font-weight: 800;
+  font-weight: 800;
+  letter-spacing: .2px;
 }
 
 .nav {
@@ -263,7 +265,7 @@ body {
 }
 
 .btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
