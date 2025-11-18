@@ -55,6 +55,21 @@ body {
   padding: 14px 0;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.brand__logo {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+}
 
 .brand__name {
   color: #ff6a3d;
