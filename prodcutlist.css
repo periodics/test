@@ -55,7 +55,6 @@ body {
   padding: 14px 0;
 }
 
-<<<<<<< HEAD
 .brand {
   display: flex;
   align-items: center;
@@ -71,8 +70,6 @@ body {
   width: 32px;
   height: 32px;
 }
-=======
->>>>>>> 9a2c42ab1d3dbfe0f4e786664a9a06e32aaef5c3
 
 .brand__name {
   color: #ff6a3d;
