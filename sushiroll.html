@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pesen Makan — Detail Produk</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sushiroll.css">
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="#" class="brand">
+      <div class="brand__logo"></div>
+      <span class="brand__name">Pesen Makan</span>
+    </a>
+
+    <nav class="nav">
+      <a class="nav__link" href="homepage.html">Home</a>
+      <a class="nav__link" href="offers.html">Offers</a>
+      <a class="nav__link" href="productlist.html">Products</a>
+      <a class="nav__link" href="aboutus.html">About us</a>
+      <a class="nav__link" href="profile.html">Profile</a>
+    </nav>
+
+    <div class="user">
+      <button class="icon-btn">🔍</button>
+      <div class="avatar">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXIdvC1Q4WL7_zA6cJm3yileyBT2OsWhBb9Q&s">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN PAGE -->
+main class="container page">
+  <div class="detail-layout">
+
+    <!-- LEFT: IMAGE -->
+    <div class="detail-image card">
+      <img id="productImage" src="/sushi.webp" alt="">
+    </div>
+
+    <!-- RIGHT: PRODUCT INFO -->
+    <div class="detail-info">
+      <h1 id="productName">Sushi Roll</h1>
+      <p class="muted" id="productCategory">Japanese • 8 pcs</p>
+
+      <div class="detail-meta">
+        <span class="rating">★ 4.8</span>
+        <span class="price">Rp 85.000</span>
+      </div>
+
+      <p class="desc">
+        Gulungan sushi premium dengan isian salmon segar, alpukat, nori pilihan, dan nasi Jepang bertekstur lembut. 
+        Dibuat dengan teknik autentik untuk rasa yang seimbang dan segar.
+      </p>
+
+      <div class="extra-info">
+        <div class="extra-card"><strong>Porsi:</strong> Untuk 1–2 orang</div>
+        <div class="extra-card"><strong>Kalori:</strong> 320 kkal</div>
+        <div class="extra-card"><strong>Estimasi Waktu:</strong> 10–15 menit</div>
+      </div>
+
+      <!-- QUANTITY -->
+      <div class="qty-box">
+        <button class="qty-btn">−</button>
+        <span class="qty">1</span>
+        <button class="qty-btn">+</button>
+      </div>
+
+      <div class="detail-actions">
+        <button class="btn btn--ghost btn--lg">Tambahkan ke Favorit ❤️</button>
+        <button class="btn btn--primary btn--lg">Tambah ke Keranjang</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INGREDIENTS & DETAILS -->
+  <section class="section">
+    <h2>Informasi Lengkap</h2>
+
+    <div class="info-card card">
+      <h3>Bahan & Komposisi</h3>
+      <ul class="list">
+        <li>Salmon sashimi segar</li>
+        <li>Nori Jepang kualitas premium</li>
+        <li>Nasi sushi dengan cuka beras</li>
+        <li>Alpukat matang</li>
+        <li>Timun segar</li>
+        <li>Saus soy & wasabi</li>
+      </ul>
+
+      <h3>Deskripsi Tambahan</h3>
+      <p>
+        Sushi Roll ini dibuat oleh chef berpengalaman dengan teknik tradisional Jepang.
+        Setiap gulungan dipastikan seimbang antara rasa gurih, segar, dan umami yang khas.
+      </p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section">
+    <h2>Ulasan Pengguna</h2>
+
+    <div class="review-list">
+      <article class="review card">
+        <div class="review-header">
+          <strong>Atsuko</strong>
+          <span class="rating">★ 5.0</span>
+        </div>
+        <p>Sushi super fresh! Salmonnya lembut dan tidak amis. Recommended banget!</p>
+      </article>
+
+      <article class="review card">
+        <div class="review-header">
+          <strong>Dimas</strong>
+          <span class="rating">★ 4.7</span>
+        </div>
+        <p>Rasanya enak, tekstur nasi pas, tapi porsi agak kecil untuk saya 😅</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- RECOMMENDATIONS -->
+  <section class="section">
+    <h2>Rekomendasi Lainnya</h2>
+
+    <div class="reco-grid">
+
+      <article class="reco card">
+        <img src="/pizza.webp" alt="">
+        <div class="reco-info">
+          <h3>Margherita Pizza</h3>
+          <p class="muted">Rp 65.000</p>
+        </div>
+      </article>
+
+      <article class="reco card">
+        <img src="/burger.jpg" alt="">
+        <div class="reco-info">
+          <h3>Burger Keju</h3>
+          <p class="muted">Rp 48.000</p>
+        </div>
+      </article>
+
+      <article class="reco card">
+        <img src="/minumansegar.jpg" alt="">
+        <div class="reco-info">
+          <h3>Ice Latte</h3>
+          <p class="muted">Rp 22.000</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>&copy; 2025 Pesen Makan • Semua hak dilindungi.</p>
+    <nav class="footer__nav">
+      <a href="#">Kebijakan Privasi</a>
+      <span>•</span>
+      <a href="#">Syarat & Ketentuan</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
