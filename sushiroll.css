@@ -33,11 +33,13 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* TOPBAR (SAMA SEPERTI HALAMAN SEBELUMNYA) */
+/* TOPBAR */
 .topbar {
   position: sticky;
+  top: 0;
+  z-index: 50;
   background: #fff;
-  border-bottom: 1px solid (--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .topbar__inner {
@@ -57,15 +59,14 @@ body {
 }
 
 .brand__logo {
-  display: grid;
-  place-items: center;
   width: 32px;
   height: 32px;
+  border-radius: 8px;
+  background: var(--brand);
 }
 
 .brand__name {
-  color: #ff6a3d;
-  font-weight: 800;
+  color: var(--brand);
   font-weight: 800;
   letter-spacing: .2px;
 }
@@ -83,12 +84,12 @@ body {
   font-weight: 600;
   padding: 6px 10px;
   border-radius: 10px;
+  transition: .2s;
 }
 
-.nav__link--active {
+.nav__link:hover {
+  background: #fff3ef;
   color: var(--brand);
-  background: #fff0ec;
-  border: 1px solid #ffd8cd;
 }
 
 .user {
@@ -105,8 +106,13 @@ body {
   background: #fff;
   border: 1px solid var(--line);
   color: #374151;
-  cursor: pointer;
   border-radius: 10px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.icon-btn:hover {
+  background: #f2f2f2;
 }
 
 .avatar {
@@ -115,7 +121,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
 .avatar img {
@@ -124,13 +130,12 @@ body {
   object-fit: cover;
 }
 
-
 /* DETAIL LAYOUT */
 .detail-layout {
   display: grid;
   grid-template-columns: 420px 1fr;
   gap: 32px;
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 .detail-image img {
@@ -142,14 +147,19 @@ body {
 
 .detail-info h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.muted {
+  color: var(--muted);
 }
 
 .detail-meta {
   display: flex;
   gap: 18px;
   margin: 12px 0;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
 }
 
@@ -169,14 +179,17 @@ body {
 .desc {
   color: var(--muted);
   font-size: 1rem;
+  line-height: 1.55rem;
+  margin-top: 10px;
 }
 
-/* EXTRA INFO BOXES */
+/* EXTRA INFO */
 .extra-info {
   margin-top: 18px;
   display: flex;
   gap: 14px;
 }
+
 .extra-card {
   background: #fff;
   border: 1px solid var(--line);
@@ -185,13 +198,14 @@ body {
   font-size: .95rem;
 }
 
-/* QUANTITY BOX */
+/* QTY */
 .qty-box {
   margin-top: 18px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .qty-btn {
   padding: 8px 14px;
   border-radius: 10px;
@@ -200,6 +214,7 @@ body {
   cursor: pointer;
   font-size: 1.2rem;
 }
+
 .qty {
   font-size: 1.2rem;
   font-weight: 700;
@@ -211,18 +226,26 @@ body {
   display: flex;
   gap: 14px;
 }
+
 .btn {
   padding: 12px 18px;
   border-radius: 12px;
   border: 1px solid transparent;
   cursor: pointer;
   font-weight: 700;
+  transition: .2s;
 }
+
 .btn--primary {
   background: var(--brand);
   color: #fff;
   border-color: var(--brand-600);
 }
+
+.btn--primary:hover {
+  background: var(--brand-600);
+}
+
 .btn--ghost {
   background: transparent;
   border-color: var(--line);
@@ -232,6 +255,7 @@ body {
 .info-card {
   padding: 24px;
 }
+
 .list li {
   margin: 6px 0;
 }
@@ -241,9 +265,11 @@ body {
   display: grid;
   gap: 16px;
 }
+
 .review {
   padding: 20px;
 }
+
 .review-header {
   display: flex;
   justify-content: space-between;
@@ -257,12 +283,29 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
 .reco img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: var(--radius);
 }
+
 .reco-info {
   padding: 14px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.footer__nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 4px;
+  font-weight: 500;
 }
