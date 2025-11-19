@@ -50,7 +50,6 @@ body {
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 50;
   background: #fff;
   border-bottom: 1px solid var(--line);
   backdrop-filter: saturate(1.2) blur(4px);
@@ -339,6 +338,7 @@ body {
   color: var(--muted);
   font-size: .94rem;
   margin: 0 0 8px;
+
 }
 
 .offer__footer {
@@ -357,7 +357,7 @@ body {
 }
 
 .pill {
-  display: inline-flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   padding: 6px 10px;
