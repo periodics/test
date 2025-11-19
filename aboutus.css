@@ -25,19 +25,19 @@ body {
   background: #fff;
   border-bottom: 1px solid var(--line);
   backdrop-filter: saturate(1.2) blur(4px);
-  z-index: 50;
+;
 }
 
 .topbar__inner {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 40px;
   padding: 14px 0;
 }
 
 .container {
   width: min(1120px, 92%);
-  margin: auto;
+  margin-inline: auto;
 }
 
 /* Brand */
@@ -46,19 +46,14 @@ body {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-}
-
-.brand__logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: #fff0ec;
-  border: 1px solid #ffd8cd;
+  color: var(--text);
+  font-weight: 800;
 }
 
 .brand__name {
-  color: var(--brand);
+    color: var(--brand);
   font-weight: 800;
+  letter-spacing: .2px;
 }
 
 /* Nav */
@@ -92,7 +87,7 @@ body {
 .icon-btn {
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 10 px;
   background: #fff;
   border: 1px solid var(--line);
 }
