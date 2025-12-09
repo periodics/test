@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pesen Makan — Favorit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="dp.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar__inner">
+            <a href="homepage.html" class="brand">
+                <div class="brand__logo" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 30c0 13.255 10.745 24 24 24s24-10.745 24-24H8Z" fill="#ff6a3d" />
+                        <path d="M54 30c0 11.046-8.954 20-20 20S14 41.046 14 30" stroke="#ff6a3d" stroke-width="4"
+                            stroke-linecap="round" />
+                        <path d="M20 18c0 2 2 4 8 4s16-2 16-4" stroke="#111827" stroke-width="3"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <span class="brand__name">Pesen Makan</span>
+            </a>
+
+            <nav class="nav">
+                <a class="nav__link" href="homepage.html">Home</a>
+        <a class="nav__link" href="offers.html">Offers</a>
+        <a class="nav__link" href="productlist.html">Products</a>
+        <a class="nav__link" href="aboutus.html">About us</a>
+        <a class="nav__link" href="profile.html">Profile</a>
+        <a class="nav__link nav__link--active" href="favorit.html">Favorit</a>
+        <a class="nav__link" href="order.html">Pesanan</a>
+            </nav>
+
+            <div class="user">
+                <button class="icon-btn" aria-label="Search">🔍</button>
+                <div class="avatar"><img src="https://i.pravatar.cc/40?img=10" alt="avatar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page">
+        <!-- hero -->
+        <section class="section">
+            <div class="hero card" style="display:flex;align-items:center;justify-content:space-between;padding:16px;">
+                <div>
+                    <h1 class="hero__title">Favoritmu</h1>
+                    <p class="muted">Simpan item & restoran untuk repeat order lebih cepat. Kelola koleksi, lihat
+                        rekomendasi, atau bagikan favoritmu.</p>
+                </div>
+                <div class="hero-actions">
+                    <button id="browse-menu" class="btn btn--primary">Telusuri Menu</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section layout-two-col">
+            <!-- LEFT: Koleksi / Folder (draggable) -->
+            <aside class="sidebar card">
+                <div class="sidebar-head">
+                    <h3>Koleksi</h3>
+                    <button id="add-collection" class="btn btn--ghost btn--sm">+ Baru</button>
+                </div>
+                <p class="muted">Tarik untuk menyusun ulang. Klik nama untuk melihat isi koleksi.</p>
+
+                <ul id="collections" class="collections" aria-label="Koleksi favorit">
+                    <li class="collection" draggable="true" data-id="1">
+                        <div class="col-left">
+                            <span class="drag-handle" aria-hidden="true">☰</span>
+                            <button class="col-name">Makanan Kerja</button>
+                        </div>
+                        <div class="col-actions">
+                            <button class="icon small share" title="Bagikan">🔗</button>
+                            <button class="icon small delete" title="Hapus">🗑️</button>
+                        </div>
+                    </li>
+
+                    <li class="collection" draggable="true" data-id="2">
+                        <div class="col-left">
+                            <span class="drag-handle" aria-hidden="true">☰</span>
+                            <button class="col-name">Makanan Malam</button>
+                        </div>
+                        <div class="col-actions">
+                            <button class="icon small share" title="Bagikan">🔗</button>
+                            <button class="icon small delete" title="Hapus">🗑️</button>
+                        </div>
+                    </li>
+
+                    <li class="collection" draggable="true" data-id="3">
+                        <div class="col-left">
+                            <span class="drag-handle" aria-hidden="true">☰</span>
+                            <button class="col-name">Camilan</button>
+                        </div>
+                        <div class="col-actions">
+                            <button class="icon small share" title="Bagikan">🔗</button>
+                            <button class="icon small delete" title="Hapus">🗑️</button>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- RIGHT: Grid daftar item restoran / menu -->
+            <div class="right-col">
+                <!-- If empty state: show .empty (toggle via JS). By default we show content. -->
+                <div id="content-area">
+                    <!-- Toolbar -->
+                    <div class="toolbar card">
+                        <div class="toolbar-left">
+                            <label class="view-toggle">
+                                <input type="radio" name="view" value="grid" checked /> Grid
+                            </label>
+                            <label class="view-toggle">
+                                <input type="radio" name="view" value="list" /> List
+                            </label>
+                        </div>
+                        <div class="toolbar-right">
+                            <input id="filter" class="search" placeholder="Cari favorit..." />
+                        </div>
+                    </div>
+
+                    <!-- Favorites grid / list -->
+                    <div id="favorites-grid" class="grid grid--cards">
+                        <!-- card template 1 -->
+                        <article class="fav card" data-id="f1">
+                            <div class="fav__media">
+                                <img src="nasigoreng.jpg" alt="Nasi Goreng" />
+                                <span class="badge badge--info avail">Tersedia</span>
+                            </div>
+                            <div class="fav__body">
+                                <div class="fav__head">
+                                    <h3 class="fav__title">Nasi Goreng</h3>
+                                    <div class="fav__price">Rp 32.000</div>
+                                </div>
+                                <p class="fav__meta muted">Pedas sedang • 20-30 menit</p>
+                                <div class="fav__actions">
+                                    <button class="btn btn--primary btn--sm add-to-cart">Tambah ke Keranjang</button>
+                                    <div class="action-icons">
+                                        <button class="icon share" title="Bagikan">🔗</button>
+                                        <button class="icon preview" title="Quick preview">👁️</button>
+                                        <button class="icon delete" title="Hapus">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- card template 2 -->
+                        <article class="fav card" data-id="f2">
+                            <div class="fav__media">
+                                <img src="burger.jpg" alt="Burger" />
+                                <span class="badge badge--danger out">Hampir habis</span>
+                            </div>
+                            <div class="fav__body">
+                                <div class="fav__head">
+                                    <h3 class="fav__title">Burger Keju</h3>
+                                    <div class="fav__price">Rp 48.000</div>
+                                </div>
+                                <p class="fav__meta muted">Porsi medium • 25–35 menit</p>
+                                <div class="fav__actions">
+                                    <button class="btn btn--primary btn--sm add-to-cart">Tambah ke Keranjang</button>
+                                    <div class="action-icons">
+                                        <button class="icon share">🔗</button>
+                                        <button class="icon preview">👁️</button>
+                                        <button class="icon delete">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- card template 3 -->
+                        <article class="fav card" data-id="f3">
+                            <div class="fav__media">
+                                <img src="sushi.webp" alt="Sushi" />
+                                <span class="badge badge--warning closed">Tutup</span>
+                            </div>
+                            <div class="fav__body">
+                                <div class="fav__head">
+                                    <h3 class="fav__title">Sushi Roll</h3>
+                                    <div class="fav__price">Rp 85.000</div>
+                                </div>
+                                <p class="fav__meta muted">8 pcs • 30–40 menit</p>
+                                <div class="fav__actions">
+                                    <button class="btn btn--primary btn--sm add-to-cart" disabled>Tambah ke
+                                        Keranjang</button>
+                                    <div class="action-icons">
+                                        <button class="icon share">🔗</button>
+                                        <button class="icon preview">👁️</button>
+                                        <button class="icon delete">🗑️</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Rekomendasi personal -->
+                    <section class="section">
+                        <h2 class="section__title">Rekomendasi untukmu</h2>
+                        <div class="grid grid--cards recommendations">
+                            <article class="rec card">
+                                <img src="ayam bakar.jpg" alt="Rec 1" />
+                                <div style="padding:12px;">
+                                    <h4>Ayam Bakar Madu</h4>
+                                    <p class="muted">Paling sering kamu pesan minggu ini</p>
+                                </div>
+                            </article>
+
+                            <article class="rec card">
+                                <img src="pasta.webp" alt="Rec 2" />
+                                <div style="padding:12px;">
+                                    <h4>Pasta Carbonara</h4>
+                                    <p class="muted">Cocok untuk makan malam</p>
+                                </div>
+                            </article>
+
+                            <article class="rec card">
+                                <img src="coffe.webp" alt="Rec 3" />
+                                <div style="padding:12px;">
+                                    <h4>Kopi Gula Aren</h4>
+                                    <p class="muted">Coffe favoritmu</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Empty state (hidden by default) -->
+                <div id="empty-state" class="empty card" hidden>
+                    <h3>Belum ada favorit</h3>
+                    <p class="muted">Simpan restoran atau menu yang kamu suka supaya bisa pesan ulang dengan cepat.</p>
+                    <div style="margin-top:12px;">
+                        <button class="btn btn--primary" id="empty-browse">Telusuri Menu</button>
+                        <button class="btn btn--ghost" id="empty-recommend">Lihat Rekomendasi</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- QUICK PREVIEW MODAL -->
+    <div id="preview-modal" class="modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <button id="close-modal" class="modal-close" aria-label="Close">✕</button>
+            <div class="modal-body">
+                <div class="modal-media">
+                    <img id="modal-img" src="" alt="preview" />
+                </div>
+                <div class="modal-info">
+                    <h3 id="modal-title">Title</h3>
+                    <p id="modal-desc" class="muted">Detail & bahan</p>
+                    <p><strong>Harga:</strong> <span id="modal-price">Rp 0</span></p>
+                    <p><strong>Ukuran:</strong>
+                        <select id="modal-size">
+                            <option>Small</option>
+                            <option selected>Regular</option>
+                            <option>Large (+Rp 10.000)</option>
+                        </select>
+                    </p>
+                    <div style="margin-top:12px;display:flex;gap:10px;">
+                        <button id="modal-add" class="btn btn--primary">Tambah ke Keranjang</button>
+                        <button id="modal-close-2" class="btn btn--ghost">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>© 2025 Pesen Makan • Semua hak dilindungi.</p>
+            <nav class="footer__nav">
+                <a href="#">Kebijakan Privasi</a>
+                <span>•</span>
+                <a href="#">Syarat & Ketentuan</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Minimal JS to enable interactions -->
+    <script>
+        // Drag & drop reorder for collections
+        (function () {
+            const list = document.getElementById('collections');
+            let dragEl = null;
+            list.addEventListener('dragstart', e => {
+                dragEl = e.target.closest('.collection');
+                e.dataTransfer.effectAllowed = 'move';
+                e.target.classList.add('dragging');
+            });
+            list.addEventListener('dragend', e => {
+                if (dragEl) dragEl.classList.remove('dragging');
+                dragEl = null;
+            });
+            list.addEventListener('dragover', e => {
+                e.preventDefault();
+                const after = getDragAfterElement(list, e.clientY);
+                const dragging = list.querySelector('.dragging');
+                if (!dragging) return;
+                if (after == null) list.appendChild(dragging);
+                else list.insertBefore(dragging, after);
+            });
+            function getDragAfterElement(container, y) {
+                const elements = [...container.querySelectorAll('.collection:not(.dragging)')];
+                return elements.reduce((closest, child) => {
+                    const box = child.getBoundingClientRect();
+                    const offset = y - box.top - box.height / 2;
+                    if (offset < 0 && offset > closest.offset) {
+                        return { offset, element: child };
+                    } else {
+                        return closest;
+                    }
+                }, { offset: Number.NEGATIVE_INFINITY }).element;
+            }
+        })();
+
+        // Quick preview modal, add to cart, delete, share
+        (function () {
+            const modal = document.getElementById('preview-modal');
+            const close = document.getElementById('close-modal');
+            const close2 = document.getElementById('modal-close-2');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-desc');
+            const modalPrice = document.getElementById('modal-price');
+            const modalAdd = document.getElementById('modal-add');
+
+            document.querySelectorAll('.fav .preview').forEach(btn => {
+                btn.addEventListener('click', e => {
+                    const card = e.target.closest('.fav');
+                    const img = card.querySelector('img').src;
+                    const title = card.querySelector('.fav__title').textContent;
+                    const meta = card.querySelector('.fav__meta').textContent;
+                    const price = card.querySelector('.fav__price').textContent;
+
+                    modalImg.src = img;
+                    modalTitle.textContent = title;
+                    modalDesc.textContent = meta;
+                    modalPrice.textContent = price;
+
+                    modal.style.display = 'block';
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            function closeModal() {
+                modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+            close.addEventListener('click', closeModal);
+            close2.addEventListener('click', closeModal);
+
+            // Add to cart quick action
+            document.querySelectorAll('.add-to-cart').forEach(btn => {
+                btn.addEventListener('click', e => {
+                    btn.textContent = '✓ Ditambahkan';
+                    btn.disabled = true;
+                    setTimeout(() => { btn.textContent = 'Tambah ke Keranjang'; btn.disabled = false; }, 1200);
+                });
+            });
+
+            // delete favorite
+            document.querySelectorAll('.fav .delete').forEach(b => {
+                b.addEventListener('click', e => {
+                    const card = e.target.closest('.fav');
+                    card.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 250 }).onfinish = () => card.remove();
+                    // if grid empty -> show empty-state (demo)
+                    setTimeout(() => {
+                        const grid = document.getElementById('favorites-grid');
+                        if (!grid || grid.children.length === 0) {
+                            document.getElementById('content-area').hidden = true;
+                            document.getElementById('empty-state').hidden = false;
+                        }
+                    }, 300);
+                });
+            });
+
+            // share
+            document.querySelectorAll('.fav .share, .collection .share').forEach(b => {
+                b.addEventListener('click', async e => {
+                    const card = e.target.closest('.fav') || e.target.closest('.collection');
+                    const title = card ? (card.querySelector('.fav__title') ? card.querySelector('.fav__title').textContent : card.querySelector('.col-name').textContent) : 'Favorit';
+                    const url = location.href + '#shared-' + (card ? card.dataset.id : '0');
+                    if (navigator.share) {
+                        try { await navigator.share({ title, url }); }
+                        catch (err) { copyToClipboard(url); alert('Link disalin ke clipboard'); }
+                    } else {
+                        copyToClipboard(url);
+                        alert('Link disalin ke clipboard: ' + url);
+                    }
+                });
+            });
+
+            function copyToClipboard(text) {
+                const ta = document.createElement('textarea');
+                ta.value = text; document.body.appendChild(ta);
+                ta.select(); document.execCommand('copy'); ta.remove();
+            }
+
+            // sidebar collection delete (demo)
+            document.querySelectorAll('.collection .delete').forEach(b => {
+                b.addEventListener('click', e => {
+                    const li = e.target.closest('.collection');
+                    li.remove();
+                });
+            });
+
+            // toolbar view toggle (grid/list)
+            document.querySelectorAll('input[name="view"]').forEach(r => {
+                r.addEventListener('change', e => {
+                    const grid = document.getElementById('favorites-grid');
+                    if (e.target.value === 'list') grid.classList.add('list-view');
+                    else grid.classList.remove('list-view');
+                });
+            });
+
+            // browse menu / empty CTA
+            document.getElementById('browse-menu').addEventListener('click', () => location.href = 'productlist.html');
+            document.getElementById('empty-browse').addEventListener('click', () => location.href = 'productlist.html');
+            document.getElementById('empty-recommend').addEventListener('click', () => document.getElementById('content-area').scrollIntoView({ behavior: 'smooth' }));
+        })();
+    </script>
+</body>
+
+</html>
