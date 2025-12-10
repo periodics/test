@@ -1,0 +1,264 @@
+:root {
+    --bg: #f7f8fb;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --brand: #ff6a3d;
+    --brand-600: #ef4e24;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(16, 24, 40, .08);
+    --accent: #ef4444;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.45;
+}
+
+/* Topbar (ke konsistenan) */
+.topbar {
+    display: grid;
+    position:flex;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    z-index: 50
+}
+
+.topbar__inner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 0
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 800
+}
+
+.brand__logo {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    background: #fff0ec;
+    border-radius: 8px;
+    border: 1px solid #ffd8cd
+}
+
+.brand__name {
+    color: var(--brand);
+    font-weight: 800
+    margin-left: auto
+}
+
+.nav {
+    display: flex;
+    gap: 12px;
+    margin-left: auto
+}
+
+.nav__link {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 8px
+}
+
+/* Auth page layout */
+.auth-page {
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 32px 16px
+}
+
+.auth-card {
+    width: min(520px, 96%);
+    padding: 26px;
+    border-radius: 14px
+}
+
+.auth-card h1 {
+    margin: 0 0 8px
+}
+
+.auth-card p.muted {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: .98rem
+}
+
+/* form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.auth-form label {
+    font-weight: 700;
+    font-size: .95rem
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+}
+
+.auth-form input:focus {
+    box-shadow: 0 6px 16px rgba(16, 24, 40, .04);
+    border-color: var(--brand-600)
+}
+
+.password-wrap {
+    position: relative;
+    display: flex;
+    align-items: center
+}
+
+.password-wrap .icon-btn {
+    position: absolute;
+    right: 8px;
+    background: transparent;
+    border: 0;
+    padding: 6px;
+    font-size: 16px;
+    cursor: pointer
+}
+
+/* buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 800;
+    border: 1px solid transparent;
+    cursor: pointer
+}
+
+.btn--primary {
+    background: var(--brand);
+    color: #fff;
+    border-color: var(--brand-600)
+}
+
+.btn--ghost {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--text)
+}
+
+.btn--outline {
+    background: transparent;
+    border: 1px dashed var(--line);
+    color: var(--text)
+}
+
+.btn:active {
+    transform: translateY(1px)
+}
+
+/* helpers */
+.row {
+    display: flex;
+    align-items: center
+}
+
+.between {
+    justify-content: space-between
+}
+
+.checkbox input {
+    margin-right: 8px
+}
+
+.link {
+    color: var(--brand);
+    text-decoration: none
+}
+
+.link:hover {
+    text-decoration: underline
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0
+}
+
+.or span {
+    background: var(--card);
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    font-weight: 700
+}
+
+.socials {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.small {
+    font-size: .9rem
+}
+
+.muted {
+    color: var(--muted)
+}
+
+/* footer */
+.footer {
+    border-top: 1px solid var(--line);
+    background: #fff;
+    margin-top: 18px
+}
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    color: #4b5563;
+    font-size: .9rem
+}
+
+/* responsive */
+@media(max-width:480px) {
+    .auth-card {
+        padding: 18px
+    }
+
+    .brand__name {
+        font-size: .95rem
+    }
+}

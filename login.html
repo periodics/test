@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pesen Makan — Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="gabungan.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="homepage.html" class="brand">
+        
+        <span class="brand__name">Pesen Makan</span>
+      </a>
+      <nav class="nav" aria-hidden="true">
+        <a class="nav__link" href="homepage.html">Home</a>
+        <a class="nav__link" href="index.html">Offers</a>
+        <a class="nav__link" href="favorites.html">Favorit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-card card">
+      <h1>Masuk ke Pesen Makan</h1>
+      <p class="muted">Masukkan email dan kata sandi untuk melanjutkan.</p>
+
+      <form id="loginForm" class="auth-form" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="contoh@domain.com" />
+
+        <label for="password">Kata Sandi</label>
+        <div class="password-wrap">
+          <input id="password" name="password" type="password" required placeholder="Masukkan kata sandi" />
+          <button type="button" class="icon-btn pwd-toggle" id="togglePwd" aria-label="Tampilkan kata sandi">👁️</button>
+        </div>
+
+        <div class="row between">
+          <label class="checkbox">
+            <input type="checkbox" id="remember" /> <span>Ingat saya</span>
+          </label>
+          <a href="forgotpassword.html" class="link">Lupa kata sandi?</a>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Masuk</button>
+
+        <div class="or"><span>atau</span></div>
+
+        <div class="socials">
+          <button type="button" class="btn btn--ghost">Masuk dengan Google</button>
+          <button type="button" class="btn btn--ghost">Masuk dengan Facebook</button>
+        </div>
+
+        <p class="muted small">Belum punya akun? <a href="homepage.html" class="link">Daftar sekarang</a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer small">
+    <div class="container footer__inner">
+      <p>© 2025 Pesen Makan</p>
+      <nav class="footer__nav"><a href="#">Kebijakan Privasi</a> <span>•</span> <a href="#">Syarat</a></nav>
+    </div>
+  </footer>
+
+<script>
+  // Toggle show/hide password
+  document.getElementById('togglePwd').addEventListener('click', function(){
+    const pwd = document.getElementById('password');
+    if(pwd.type === 'password'){ pwd.type = 'text'; this.textContent = '🙈'; }
+    else { pwd.type = 'password'; this.textContent = '👁️'; }
+  });
+
+  // Simple submit handler (no backend)
+  document.getElementById('loginForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    const pwd = document.getElementById('password').value.trim();
+    if(!email || !pwd){ alert('Lengkapi email dan kata sandi.'); return; }
+    // simulate login success
+    alert('Berhasil masuk — (simulasi)\nMengalihkan ke Homepage...');
+    window.location.href = 'homepage.html';
+  });
+</script>
+</body>
+</html>
