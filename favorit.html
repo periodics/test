@@ -35,7 +35,7 @@
     </header>
 
     <main class="container page">
-        <!-- hero -->
+      
         <section class="section">
             <div class="hero card" style="display:flex;align-items:center;justify-content:space-between;padding:16px;">
                 <div>
@@ -50,7 +50,7 @@
         </section>
 
         <section class="section layout-two-col">
-            <!-- LEFT: Koleksi / Folder (draggable) -->
+
             <aside class="sidebar card">
                 <div class="sidebar-head">
                     <h3>Koleksi</h3>
@@ -94,11 +94,11 @@
                 </ul>
             </aside>
 
-            <!-- RIGHT: Grid daftar item restoran / menu -->
+           
             <div class="right-col">
-                <!-- If empty state: show .empty (toggle via JS). By default we show content. -->
+                
                 <div id="content-area">
-                    <!-- Toolbar -->
+
                     <div class="toolbar card">
                         <div class="toolbar-left">
                             <label class="view-toggle">
@@ -113,9 +113,9 @@
                         </div>
                     </div>
 
-                    <!-- Favorites grid / list -->
+                   
                     <div id="favorites-grid" class="grid grid--cards">
-                        <!-- card template 1 -->
+                       
                         <article class="fav card" data-id="f1">
                             <div class="fav__media">
                                 <img src="nasigoreng.jpg" alt="Nasi Goreng" />
@@ -138,7 +138,7 @@
                             </div>
                         </article>
 
-                        <!-- card template 2 -->
+                       
                         <article class="fav card" data-id="f2">
                             <div class="fav__media">
                                 <img src="burger.jpg" alt="Burger" />
@@ -161,7 +161,7 @@
                             </div>
                         </article>
 
-                        <!-- card template 3 -->
+                       
                         <article class="fav card" data-id="f3">
                             <div class="fav__media">
                                 <img src="sushi.webp" alt="Sushi" />
@@ -186,7 +186,7 @@
                         </article>
                     </div>
 
-                    <!-- Rekomendasi personal -->
+                    
                     <section class="section">
                         <h2 class="section__title">Rekomendasi untukmu</h2>
                         <div class="grid grid--cards recommendations">
@@ -217,7 +217,7 @@
                     </section>
                 </div>
 
-                <!-- Empty state (hidden by default) -->
+               
                 <div id="empty-state" class="empty card" hidden>
                     <h3>Belum ada favorit</h3>
                     <p class="muted">Simpan restoran atau menu yang kamu suka supaya bisa pesan ulang dengan cepat.</p>
@@ -230,7 +230,7 @@
         </section>
     </main>
 
-    <!-- QUICK PREVIEW MODAL -->
+    
     <div id="preview-modal" class="modal" aria-hidden="true">
         <div class="modal-dialog">
             <button id="close-modal" class="modal-close" aria-label="Close">✕</button>
