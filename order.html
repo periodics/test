@@ -115,32 +115,5 @@
     </nav>
   </div>
 </footer>
-
-<script>
-  // Simulasi update status otomatis ke "Selesai"
-  setTimeout(()=>{
-    const badge=document.querySelector('.badge');
-    badge.textContent='Selesai';
-    badge.className='badge badge--success';
-    document.querySelectorAll('.step').forEach(s=>s.classList.add('done'));
-    document.querySelector('#review-section').hidden=false;
-    showToast('Pesanan kamu sudah selesai 🎉');
-  },10000);
-
-  // Toast notif
-  function showToast(msg){
-    const t=document.getElementById('toast');
-    t.textContent=msg;
-    t.hidden=false;
-    setTimeout(()=>{t.classList.add('show');},10);
-    setTimeout(()=>{t.classList.remove('show');t.hidden=true;},4000);
-  }
-
-  // Tombol aksi tanpa konfirmasi modal
-  document.getElementById('cancel-btn').onclick=()=>showToast('Pesanan dibatalkan ❌');
-  document.getElementById('refund-btn').onclick=()=>showToast('Permintaan refund diajukan 💬');
-  document.getElementById('repeat-btn').onclick=()=>showToast('Pesanan diulang 🔁');
-  document.getElementById('invoice-btn').onclick=()=>showToast('Invoice diunduh 📄');
-</script>
 </body>
 </html>
