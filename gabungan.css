@@ -67,7 +67,7 @@ body {
 .brand__name {
     color: var(--brand);
     font-weight: 800
-    margin-left: auto
+    
 }
 
 .nav {
