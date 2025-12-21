@@ -131,7 +131,6 @@ body {
 }
 
 .auth-form input:focus {
-    box-shadow: 0 6px 16px rgba(16, 24, 40, .04);
     border-color: var(--brand-600)
 }
 
@@ -166,7 +165,8 @@ body {
 .btn--primary {
     background: var(--brand);
     color: #fff;
-    border-color: var(--brand-600)
+    border-color: var(--brand-600);
+    text-decoration: none
 }
 
 .btn--ghost {
@@ -188,7 +188,7 @@ body {
 /* helpers */
 .row {
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 .between {

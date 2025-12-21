@@ -26,7 +26,7 @@
 
       <form id="loginForm" class="auth-form" novalidate>
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" required placeholder="contoh@domain.com" />
+        <input id="email" name="email" type="email" required placeholder="contoh : telkomuniversity@gmail.com" />
 
         <label for="password">Kata Sandi</label>
         <div class="password-wrap">
@@ -41,7 +41,7 @@
           <a href="forgotpassword.html" class="link">Lupa kata sandi?</a>
         </div>
 
-        <button type="submit" class="btn btn--primary">Masuk</button>
+        <a href="homepage.html" class="btn btn--primary">Masuk</a>
 
         <div class="or"><span>atau</span></div>
 
@@ -62,24 +62,6 @@
     </div>
   </footer>
 
-<script>
-  // Toggle show/hide password
-  document.getElementById('togglePwd').addEventListener('click', function(){
-    const pwd = document.getElementById('password');
-    if(pwd.type === 'password'){ pwd.type = 'text'; this.textContent = '🙈'; }
-    else { pwd.type = 'password'; this.textContent = '👁️'; }
-  });
 
-  // Simple submit handler (no backend)
-  document.getElementById('loginForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const email = document.getElementById('email').value.trim();
-    const pwd = document.getElementById('password').value.trim();
-    if(!email || !pwd){ alert('Lengkapi email dan kata sandi.'); return; }
-    // simulate login success
-    alert('Berhasil masuk — (simulasi)\nMengalihkan ke Homepage...');
-    window.location.href = 'homepage.html';
-  });
-</script>
 </body>
 </html>
