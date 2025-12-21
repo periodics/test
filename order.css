@@ -12,10 +12,6 @@
     --shadow: 0 10px 30px rgba(16, 24, 40, .08);
 }
 
-* {
-    box-sizing: border-box
-}
-
 body {
     margin: 0;
     font-family: Inter, sans-serif;
@@ -36,10 +32,10 @@ body {
 }
 
 .page {
-    padding: 28px 0 60px
+    padding: 24x 0 60px
 }
 
-/* Topbar */
+
 .topbar {
     background: #fff;
     border-bottom: 1px solid var(--line);
@@ -128,7 +124,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -272,89 +268,6 @@ body {
     margin-top: 10px;
 }
 
-/* Review */
-.review {
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.stars {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    gap: 6px;
-}
-
-.stars input {
-    display: none;
-}
-
-.stars label {
-    font-size: 26px;
-    color: #ccc;
-    cursor: pointer;
-}
-
-.stars input:checked~label,
-.stars label:hover,
-.stars label:hover~label {
-    color: #ffb100;
-}
-
-textarea {
-    width: 100%;
-    min-height: 80px;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--line);
-    font-family: inherit;
-}
-
-/* Modal */
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    display: grid;
-    place-items: center;
-    z-index: 90;
-}
-
-.modal-box {
-    padding: 20px;
-    max-width: 380px;
-    width: 90%;
-}
-
-.modal-actions {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    margin-top: 12px;
-}
-
-/* Toast */
-.toast {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: #111827;
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 10px;
-    opacity: 0;
-    transition: all .4s ease;
-    z-index: 99;
-}
-
-.toast.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* Footer */
 .footer {
     border-top: 1px solid var(--line);
     background: #fff;

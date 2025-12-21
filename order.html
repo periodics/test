@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,113 +8,114 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="order.css" />
 </head>
-<body>
-<header class="topbar">
-  <div class="container topbar__inner">
-    <a href="homepage.html" class="brand">
-      
-      <span class="brand__name">Pesen Makan</span>
-    </a>
 
-    <nav class="nav">
-      <a class="nav__link" href="homepage.html">Home</a>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="homepage.html" class="brand">
+
+        <span class="brand__name">Pesen Makan</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav__link" href="homepage.html">Home</a>
         <a class="nav__link" href="offers.html">Offers</a>
         <a class="nav__link" href="productlist.html">Products</a>
         <a class="nav__link" href="aboutus.html">About us</a>
         <a class="nav__link" href="profile.html">Profile</a>
         <a class="nav__link" href="favorit.html">Favorit</a>
         <a class="nav__link nav__link--active" href="order.html">Pesanan</a>
-  </div>
-</header>
-
-<main class="container page">
-  <section class="order-header card">
-    <div>
-      <h1>Pesanan #ORD-239812</h1>
-      <p class="muted">Dipesan pada: <strong>09 Desember 2025 • 20:31 WIB</strong></p>
     </div>
-    <div class="status">
-      <span class="badge badge--info">Dalam Pengantaran</span>
+  </header>
+
+  <main class="container page">
+    <section class="order-header card">
+      <div>
+        <h1>Pesanan #ORD-239812</h1>
+        <p class="muted">Dipesan pada: <strong>09 Desember 2025 • 20:31 WIB</strong></p>
+      </div>
+      <div class="status">
+        <span class="badge badge--info">Dalam Pengantaran</span>
+      </div>
+    </section>
+
+    <section class="tracker card">
+      <div class="step done">
+        <div class="circle">1</div><span>Diterima</span>
+      </div>
+      <div class="line done"></div>
+      <div class="step done">
+        <div class="circle">2</div><span>Diproses</span>
+      </div>
+      <div class="line done"></div>
+      <div class="step active">
+        <div class="circle">3</div><span>Dalam Pengantaran</span>
+      </div>
+      <div class="line"></div>
+      <div class="step ">
+        <div class="circle">4</div><span>Selesai</span>
+      </div>
+    </section>
+
+    <section class="order-body layout-two-col">
+      <div class="left card">
+        <h2>Ringkasan Pesanan</h2>
+        <ul class="item-list">
+          <li>
+            <div><strong>Nasi Goreng Spesial</strong><br><span class="muted">x1</span></div><span>Rp 32.000</span>
+          </li>
+          <li>
+            <div><strong>Burger Keju</strong><br><span class="muted">x2</span></div><span>Rp 96.000</span>
+          </li>
+          <li>
+            <div><strong>Es Kopi Gula Aren</strong><br><span class="muted">x1</span></div><span>Rp 22.000</span>
+          </li>
+        </ul>
+        <hr>
+        <div class="summary">
+          <p>Subtotal <span>Rp 150.000</span></p>
+          <p>Ongkos Kirim <span>Rp 10.000</span></p>
+          <p>Pajak <span>Rp 5.000</span></p>
+          <p class="total">Total <span>Rp 165.000</span></p>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--primary" id="track-btn">Lacak Sekarang</button>
+          <button class="btn btn--ghost" id="cancel-btn">Batalkan Pesanan</button>
+          <button class="btn btn--ghost" id="repeat-btn">Ulang Pesan</button>
+          <button class="btn btn--ghost" id="refund-btn">Minta Refund</button>
+          <button class="btn btn--outline" id="invoice-btn">Unduh Invoice</button>
+        </div>
+      </div>
+
+      <div class="right card">
+        <h2>Informasi Pengantaran</h2>
+        <p><strong>Alamat:</strong><br>Jl. Telekomunikasi, Kabupaten Bandung</p>
+        <p><strong>Estimasi Waktu:</strong> 20:55 WIB</p>
+        <p><strong>Kurir:</strong> Pesan Makan (Ardi, Dewa, Nathan)</p>
+        <div class="map">
+          <iframe src="https://maps.google.com/maps?q=bandung&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+        <div class="contact">
+          <button class="btn btn--primary">Hubungi Kurir</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2025 Pesen Makan • Semua hak dilindungi.</p>
+      <nav class="footer__nav">
+        <a href="#">Kebijakan Privasi</a>
+        <span>•</span>
+        <a href="#">Syarat & Ketentuan</a>
+      </nav>
     </div>
-  </section>
-
-  <section class="tracker card">
-    <div class="step done"><div class="circle">1</div><span>Diterima</span></div>
-    <div class="line done"></div>
-    <div class="step done"><div class="circle">2</div><span>Diproses</span></div>
-    <div class="line done"></div>
-    <div class="step active"><div class="circle">3</div><span>Dalam Pengantaran</span></div>
-    <div class="line"></div>
-    <div class="step"><div class="circle">4</div><span>Selesai</span></div>
-  </section>
-
-  <section class="order-body layout-two-col">
-    <div class="left card">
-      <h2>Ringkasan Pesanan</h2>
-      <ul class="item-list">
-        <li><div><strong>Nasi Goreng Spesial</strong><br><span class="muted">x1</span></div><span>Rp 32.000</span></li>
-        <li><div><strong>Burger Keju</strong><br><span class="muted">x2</span></div><span>Rp 96.000</span></li>
-        <li><div><strong>Es Kopi Gula Aren</strong><br><span class="muted">x1</span></div><span>Rp 22.000</span></li>
-      </ul>
-      <hr>
-      <div class="summary">
-        <p>Subtotal <span>Rp 150.000</span></p>
-        <p>Ongkos Kirim <span>Rp 10.000</span></p>
-        <p>Pajak <span>Rp 5.000</span></p>
-        <p class="total">Total <span>Rp 165.000</span></p>
-      </div>
-
-      <div class="actions">
-        <button class="btn btn--primary" id="track-btn">Lacak Sekarang</button>
-        <button class="btn btn--ghost" id="cancel-btn">Batalkan Pesanan</button>
-        <button class="btn btn--ghost" id="repeat-btn">Ulang Pesan</button>
-        <button class="btn btn--ghost" id="refund-btn">Minta Refund</button>
-        <button class="btn btn--outline" id="invoice-btn">Unduh Invoice</button>
-      </div>
-    </div>
-
-    <div class="right card">
-      <h2>Informasi Pengantaran</h2>
-      <p><strong>Alamat:</strong><br>Jl. Telekomunikasi, Kabupaten Bandung</p>
-      <p><strong>Estimasi Waktu:</strong> 20:55 WIB</p>
-      <p><strong>Kurir:</strong> Pesan Makan (Ardi, Dewa, Nathan)</p>
-      <div class="map">
-        <iframe src="https://maps.google.com/maps?q=bandung&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-      </div>
-      <div class="contact">
-        <button class="btn btn--primary">Hubungi Kurir</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="review card" id="review-section" hidden>
-    <h2>Ulas Pesanan</h2>
-    <p>Bagikan pengalamanmu setelah pesanan selesai.</p>
-    <form>
-      <div class="stars">
-        <input type="radio" name="rating" id="r5"><label for="r5">★</label>
-        <input type="radio" name="rating" id="r4"><label for="r4">★</label>
-        <input type="radio" name="rating" id="r3"><label for="r3">★</label>
-        <input type="radio" name="rating" id="r2"><label for="r2">★</label>
-        <input type="radio" name="rating" id="r1"><label for="r1">★</label>
-      </div>
-      <textarea placeholder="Tulis ulasan kamu..." required></textarea>
-      <button type="submit" class="btn btn--primary">Kirim Ulasan</button>
-    </form>
-  </section>
-</main>
-
-<div id="toast" class="toast" hidden></div>
-
-<footer class="footer">
-  <div class="container footer__inner">
-    <p>© 2025 Pesen Makan • Semua hak dilindungi.</p>
-    <nav class="footer__nav">
-      <a href="#">Kebijakan Privasi</a>
-      <span>•</span>
-      <a href="#">Syarat & Ketentuan</a>
-    </nav>
-  </div>
-</footer>
+  </footer>
 </body>
+
 </html>
